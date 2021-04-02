@@ -1,5 +1,6 @@
 
 #include "headers.h"
+#include "FunctionHeaders.h"
 
 void pause()
 {
@@ -10,5 +11,6 @@ void pause()
 
 int main()
 {
-    pause();
+    ZigZagConverionMain();
+    //pause();
 }
