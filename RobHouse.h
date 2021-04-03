@@ -35,4 +35,29 @@ class Solution
             m_vMaxes.resize(nums.size(), -1);
             return findMax(nums, nums.size() - 1);
         }
+
+        int rob2(vector<int> &nums)
+        {
+            if(nums.size() == 1)
+            {
+                return nums[0];
+            }
+
+            if(nums.size() ==2 )
+            {
+                return std::max(nums[0], nums[0]);
+            }
+
+            vector<int> maxes(nums.size() + 1, 0);
+
+            maxes[0] = nums[0];
+            maxes[1] = nums[1];
+            maxes[2] = nums[2] + nums[0];
+            for (int i = 3; i < nums.size(); i++)
+            {
+                maxes[i] = std::max(nums[i] + maxes[i - 2], maxes[i - 1]);
+            }
+
+            return maxes[nums.size()-1];
+        }
 };
