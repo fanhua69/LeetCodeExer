@@ -3,25 +3,11 @@
 #include "FunctionHeaders.h"
 #include "FindPathNum.h"
 #include "maxProduct.h"
-
-void MaxProductMain()
-{
-    vector<int> a({-1, -2, -9, -6});
-    CMaxProduct s;
-    int N = s.maxProduct(a);
-    cout << N << endl;
-}
-
-void FindPathNumMain()
-{
-    vector<int> a({1, 1, 1});
-    vector<int> b({1, 1, 1});
-    vector<int> c({1, 0, 1});
-    vector<vector<int>> m({a, b, c});
-    Solution s;
-    int N = s.FindPathNum(m);
-    cout << "Path:" << N << endl;
-}
+#include "FindMinimumDuplicatedRotatedArray.h"
+#include "BinaryTreeUpsideDown.h"
+void diffWaysToComputeMain();
+void solveNQueensMain();
+void treeToDoublyListMain();
 
 void pause()
 {
@@ -30,7 +16,36 @@ void pause()
     cin >> pause;
 }
 
+class tt
+{
+    public:
+    tt(int aa, int bb)
+    {
+        a = aa;
+        b = bb;
+    }
+
+    int a;
+    int b;
+};
+//template <class T >
+class myless
+{
+public:
+    myless(int a, int b)
+    {}
+    // bool operator()(const T &l, const T &r)
+    // {
+    //     return l < r;
+    // }
+};
+
+void kkk();
+
 int main()
 {
-    MaxProductMain();
+    kkk();
+    myless{1, 2};
+
+    treeToDoublyListMain();
 }
